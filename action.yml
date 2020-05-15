@@ -2,9 +2,12 @@
 # to check for potential security issues on branches requested for merge to the default branch,
 # as well as show the status of the default branch as a badge.
 
-name: Bandit
+name: py3-bandit
 author: liberty young (libertyy)
 description: 'Run bandit (latest) on Py3'
+branding:
+  icon: 'check-square'
+  color: 'purple'
 
 outputs:
   bandit_stdout:
