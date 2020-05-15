@@ -1,0 +1,16 @@
+# This workflow will run the Bandit static analysis tool
+# to check for potential security issues on branches requested for merge to the default branch,
+# as well as show the status of the default branch as a badge.
+
+name: Bandit
+author: liberty young (libertyy)
+description: 'Run bandit (latest) on Py3'
+
+outputs:
+  bandit_stdout:
+    description: 'output from bandit'
+
+runs:
+  using: 'docker'
+  image: './Dockerfile'
+  post-entrypoint: '/post.sh'
