@@ -5,7 +5,7 @@
 # NOTE: Bandit's file exclusion seems to be kind of busted: https://github.com/PyCQA/bandit/issues/488
 # Using Git to exclude test files instead for the PR check.
 
-BANDIT_CONFIGSTRING="--verbose -s B322" #Do not support Python2
+BANDIT_CONFIGSTRING="--verbose"
 FULLRUN_TARGET=${TARGET_DIR:-""}
 EXCLUDED=${BANDIT_EXCLUDE:-"*/tests/*,*/settings/local.py"}
 MSG_TEMPLATE="::error file={relpath},line={line}::[{test_id}] {msg}%0A(Severity: {severity}, Confidence: {confidence})%0AMore info: https://bandit.readthedocs.io/en/latest/search.html?q={test_id}"
