@@ -24,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0 #get fuller history
       - name: Run Bandit Report
-        uses: libertyy/py3-bandit-check@v1
+        uses: libertyy/py3-bandit-check@v2
       - name: Save Bandit txt Report
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
